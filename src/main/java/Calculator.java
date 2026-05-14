@@ -22,29 +22,18 @@ public class Calculator {
         int step3 = div(product, d);
         return step3;
     public int add(int a, int b){
-        return a + b;
+        //TODO inser your realisation in method add
     }
-
     public int dif(int a, int b){
-        return a - b;
+        //TODO inser your realisation in method dif
     }
-
     public int div(int a, int b){
-        return a / b;
+        //TODO inser your realisation in method div
     }
-
     public int times(int a, int b){
-        return a * b;
+        //TODO inser your realisation in method times
     }
-
     public int solver(){
-        int x = 5;
-        int y = 67;
-        int xSquared = times(x, x);
-        int ySquared = times(y, y);
-        int numerator = add(xSquared, ySquared);
-        int denominator = dif(x, y);
-
-        return div(numerator, denominator);
+        //TODO inser your realisation in method solver
     }
 }
