@@ -4,13 +4,18 @@
 ###### main-ветка. 
 
 Выполнил:
-* Край К.Д.
-* УИТ-211
-* shovelpancakes
-* edgebranch
+
 * <Дрючин Данила Дмитриевич>
 * <УИТ-211>
 * DANDRY312
 * ветка-dryuchindd2
-* <ФИО студента>
-* <Группа>
+
+* Край К.Д.
+* УИТ-211
+* shovelpancakes
+* edgebranch
+
+Новиков Артём Владимирович
+* УИТ-211
+* Artemstop
+* ArtemNovikov

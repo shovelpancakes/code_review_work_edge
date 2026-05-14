@@ -15,6 +15,7 @@ public class Calculator {
         return a * b;
     }
 
+
     // (a + b) * c / d
     public int solver(int a, int b, int b, int c) {
         int step2 = add(a, b);

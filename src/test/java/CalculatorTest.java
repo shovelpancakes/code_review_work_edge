@@ -50,6 +50,7 @@ class CalculatorTest {
 
     @Test
     void solver() {
+
         assertEquals(10, calc.solver(10,5,2,3));
         assertEquals(17, calculator.solver());
         //TODO inser your realisation in test-method solver
