@@ -9,4 +9,13 @@
 * <УИТ-211>
 * DANDRY312
 * ветка-dryuchindd2
-* ветка-dryuchindd2
+
+* Край К.Д.
+* УИТ-211
+* shovelpancakes
+* edgebranch
+
+Новиков Артём Владимирович
+* УИТ-211
+* Artemstop
+* ArtemNovikov
