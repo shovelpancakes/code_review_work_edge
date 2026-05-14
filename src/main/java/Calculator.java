@@ -17,7 +17,7 @@ public class Calculator {
 
     public int solver(){
         int x = 5;
-        int y = 3;
+        int y = 67;
         int xSquared = times(x, x);
         int ySquared = times(y, y);
         int numerator = add(xSquared, ySquared);
