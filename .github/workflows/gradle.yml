@@ -19,20 +19,17 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
         java-version: [11, 13, 17]
-      # (опционально) можно отключить fast-failure, чтобы все комбинации выполнились до конца
       fail-fast: false
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Set up JDK ${{ matrix.java-version }}
         uses: actions/setup-java@v4
         with:
           java-version: ${{ matrix.java-version }}
-          distribution: 'temurin'
+          distribution: 'zulu'   # ← ключевое изменение
 
-      # Ключевой шаг для Linux/macOS (на Windows тоже работает через bash)
       - name: Make gradlew executable
         run: chmod +x gradlew
         shell: bash
