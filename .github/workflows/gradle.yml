@@ -1,4 +1,4 @@
-name: CI for Java with Gradle
+name: Java CI with Gradle (Matrix + Schedule)
 
 on:
   push:
@@ -9,18 +9,34 @@ on:
     - cron: '30 12 * * 3'   # среда 12:30 UTC
     - cron: '0 22 * * 5'    # пятница 22:00 UTC
 
+permissions:
+  contents: read
+
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        java-version: [11, 13, 17]
+      # (опционально) можно отключить fast-failure, чтобы все комбинации выполнились до конца
+      fail-fast: false
 
     steps:
-      - uses: actions/checkout@v4
-      - name: Set up JDK 11
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK ${{ matrix.java-version }}
         uses: actions/setup-java@v4
         with:
-          java-version: '11'
+          java-version: ${{ matrix.java-version }}
           distribution: 'temurin'
+
+      # Ключевой шаг для Linux/macOS (на Windows тоже работает через bash)
       - name: Make gradlew executable
         run: chmod +x gradlew
+        shell: bash
+
       - name: Build with Gradle
         run: ./gradlew build
+        shell: bash
