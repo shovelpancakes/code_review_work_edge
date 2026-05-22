@@ -8,6 +8,7 @@ on:
   schedule:
     - cron: '30 12 * * 3'
     - cron: '0 22 * * 5'
+
 permissions:
   contents: read
 
@@ -24,7 +25,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: ${{ matrix.java }}
-          distribution: 'temurin'
+          distribution: 'zulu'
       - name: Make gradlew executable (Unix only)
         if: runner.os != 'Windows'
         run: chmod +x gradlew
